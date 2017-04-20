@@ -93,7 +93,42 @@
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSLog(@"%@", request);
+    if([  [[request URL] description] rangeOfString:@"access_token="].location != NSNotFound) {
+        
+        AVAccessToken *accsessToken = [[AVAccessToken alloc] init];
+        
+        NSString *query = [[request URL] description];
+        NSArray *array = [query componentsSeparatedByString:@"#"];
+        
+        if([array count] > 1) {
+            query = [array lastObject];
+        }
+        
+        NSArray *pairs = [query componentsSeparatedByString:@"&"];
+        
+        for(NSString *pair in pairs){
+            NSArray *comp = [pair componentsSeparatedByString:@"="];
+            
+            if([[comp firstObject] isEqualToString:@"access_token"]) {
+                accsessToken.token = [comp lastObject];
+            } else if([[comp firstObject] isEqualToString:@"user_id"]) {
+                accsessToken.userID = [comp lastObject];
+            } else if([[comp firstObject] isEqualToString:@"expires_in"]) {
+                NSTimeInterval interval = [[comp lastObject] doubleValue];
+                accsessToken.expirationDate = [NSDate dateWithTimeIntervalSinceNow:interval];
+            }
+        }
+        
+        self.loginWebView.delegate = nil;
+        
+        if(self.completionBlock) {
+            self.completionBlock(accsessToken);
+        }
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        return NO;
+    }
     
     return YES;
 }
@@ -107,3 +142,4 @@
 // советуют webview.delegate в деаллоке ставить в нил
 // Как показывать вью контроллеры с логином + авторизацией
 // пустые классы вьюшек норм? -> webView
+// выбирать из кор даты экспайред дату и по ней ставить tvc or login
