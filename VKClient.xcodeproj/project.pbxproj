@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		19C614991EA5629200AFCD0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614981EA5629200AFCD0A /* main.m */; };
 		19C6149C1EA5629200AFCD0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C6149B1EA5629200AFCD0A /* AppDelegate.m */; };
-		19C6149F1EA5629200AFCD0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C6149E1EA5629200AFCD0A /* ViewController.m */; };
-		19C614A21EA5629200AFCD0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C614A01EA5629200AFCD0A /* Main.storyboard */; };
 		19C614A51EA5629200AFCD0A /* VKClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19C614A31EA5629200AFCD0A /* VKClient.xcdatamodeld */; };
 		19C614A71EA5629200AFCD0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C614A61EA5629200AFCD0A /* Assets.xcassets */; };
 		19C614AA1EA5629200AFCD0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C614A81EA5629200AFCD0A /* LaunchScreen.storyboard */; };
 		19C614B51EA5629200AFCD0A /* VKClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614B41EA5629200AFCD0A /* VKClientTests.m */; };
 		19C614C01EA5629200AFCD0A /* VKClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614BF1EA5629200AFCD0A /* VKClientUITests.m */; };
+		19C614DB1EA7C93B00AFCD0A /* AVFriendsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614DA1EA7C93B00AFCD0A /* AVFriendsTVC.m */; };
+		19C614DE1EA7C95C00AFCD0A /* AVLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614DD1EA7C95C00AFCD0A /* AVLoginVC.m */; };
+		19C614E11EA7CA7A00AFCD0A /* AVServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E01EA7CA7A00AFCD0A /* AVServerManager.m */; };
+		19C614E41EA8C0A400AFCD0A /* AVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E31EA8C0A400AFCD0A /* AVUser.m */; };
+		19C614E71EA8C19F00AFCD0A /* AVAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E61EA8C19F00AFCD0A /* AVAccessToken.m */; };
+		19C614EA1EA8D77D00AFCD0A /* AVLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E91EA8D77D00AFCD0A /* AVLoginWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +44,6 @@
 		19C614981EA5629200AFCD0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19C6149A1EA5629200AFCD0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19C6149B1EA5629200AFCD0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19C6149D1EA5629200AFCD0A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19C6149E1EA5629200AFCD0A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		19C614A11EA5629200AFCD0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19C614A41EA5629200AFCD0A /* VKClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VKClient.xcdatamodel; sourceTree = "<group>"; };
 		19C614A61EA5629200AFCD0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19C614A91EA5629200AFCD0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,18 @@
 		19C614BB1EA5629200AFCD0A /* VKClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C614BF1EA5629200AFCD0A /* VKClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKClientUITests.m; sourceTree = "<group>"; };
 		19C614C11EA5629200AFCD0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C614D91EA7C93B00AFCD0A /* AVFriendsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFriendsTVC.h; sourceTree = "<group>"; };
+		19C614DA1EA7C93B00AFCD0A /* AVFriendsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFriendsTVC.m; sourceTree = "<group>"; };
+		19C614DC1EA7C95C00AFCD0A /* AVLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginVC.h; sourceTree = "<group>"; };
+		19C614DD1EA7C95C00AFCD0A /* AVLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginVC.m; sourceTree = "<group>"; };
+		19C614DF1EA7CA7A00AFCD0A /* AVServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVServerManager.h; sourceTree = "<group>"; };
+		19C614E01EA7CA7A00AFCD0A /* AVServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVServerManager.m; sourceTree = "<group>"; };
+		19C614E21EA8C0A400AFCD0A /* AVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVUser.h; sourceTree = "<group>"; };
+		19C614E31EA8C0A400AFCD0A /* AVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVUser.m; sourceTree = "<group>"; };
+		19C614E51EA8C19F00AFCD0A /* AVAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAccessToken.h; sourceTree = "<group>"; };
+		19C614E61EA8C19F00AFCD0A /* AVAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAccessToken.m; sourceTree = "<group>"; };
+		19C614E81EA8D77D00AFCD0A /* AVLoginWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginWebView.h; sourceTree = "<group>"; };
+		19C614E91EA8D77D00AFCD0A /* AVLoginWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +116,12 @@
 		19C614961EA5629200AFCD0A /* VKClient */ = {
 			isa = PBXGroup;
 			children = (
+				19C614D21EA7C03800AFCD0A /* Server manager */,
+				19C614CF1EA562BB00AFCD0A /* Models */,
+				19C614CE1EA562B800AFCD0A /* Views */,
+				19C614CD1EA562B400AFCD0A /* Controllers */,
 				19C6149A1EA5629200AFCD0A /* AppDelegate.h */,
 				19C6149B1EA5629200AFCD0A /* AppDelegate.m */,
-				19C6149D1EA5629200AFCD0A /* ViewController.h */,
-				19C6149E1EA5629200AFCD0A /* ViewController.m */,
-				19C614A01EA5629200AFCD0A /* Main.storyboard */,
 				19C614A61EA5629200AFCD0A /* Assets.xcassets */,
 				19C614A81EA5629200AFCD0A /* LaunchScreen.storyboard */,
 				19C614AB1EA5629200AFCD0A /* Info.plist */,
@@ -120,6 +134,7 @@
 		19C614971EA5629200AFCD0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				19C614D01EA562DE00AFCD0A /* Images */,
 				19C614981EA5629200AFCD0A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +156,53 @@
 				19C614C11EA5629200AFCD0A /* Info.plist */,
 			);
 			path = VKClientUITests;
+			sourceTree = "<group>";
+		};
+		19C614CD1EA562B400AFCD0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				19C614D91EA7C93B00AFCD0A /* AVFriendsTVC.h */,
+				19C614DA1EA7C93B00AFCD0A /* AVFriendsTVC.m */,
+				19C614DC1EA7C95C00AFCD0A /* AVLoginVC.h */,
+				19C614DD1EA7C95C00AFCD0A /* AVLoginVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		19C614CE1EA562B800AFCD0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19C614E81EA8D77D00AFCD0A /* AVLoginWebView.h */,
+				19C614E91EA8D77D00AFCD0A /* AVLoginWebView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		19C614CF1EA562BB00AFCD0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19C614E21EA8C0A400AFCD0A /* AVUser.h */,
+				19C614E31EA8C0A400AFCD0A /* AVUser.m */,
+				19C614E51EA8C19F00AFCD0A /* AVAccessToken.h */,
+				19C614E61EA8C19F00AFCD0A /* AVAccessToken.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		19C614D01EA562DE00AFCD0A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		19C614D21EA7C03800AFCD0A /* Server manager */ = {
+			isa = PBXGroup;
+			children = (
+				19C614DF1EA7CA7A00AFCD0A /* AVServerManager.h */,
+				19C614E01EA7CA7A00AFCD0A /* AVServerManager.m */,
+			);
+			name = "Server manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +316,6 @@
 			files = (
 				19C614AA1EA5629200AFCD0A /* LaunchScreen.storyboard in Resources */,
 				19C614A71EA5629200AFCD0A /* Assets.xcassets in Resources */,
-				19C614A21EA5629200AFCD0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C6149F1EA5629200AFCD0A /* ViewController.m in Sources */,
+				19C614EA1EA8D77D00AFCD0A /* AVLoginWebView.m in Sources */,
 				19C614A51EA5629200AFCD0A /* VKClient.xcdatamodeld in Sources */,
+				19C614DB1EA7C93B00AFCD0A /* AVFriendsTVC.m in Sources */,
+				19C614E41EA8C0A400AFCD0A /* AVUser.m in Sources */,
+				19C614DE1EA7C95C00AFCD0A /* AVLoginVC.m in Sources */,
+				19C614E71EA8C19F00AFCD0A /* AVAccessToken.m in Sources */,
 				19C6149C1EA5629200AFCD0A /* AppDelegate.m in Sources */,
 				19C614991EA5629200AFCD0A /* main.m in Sources */,
+				19C614E11EA7CA7A00AFCD0A /* AVServerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		19C614A01EA5629200AFCD0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19C614A11EA5629200AFCD0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		19C614A81EA5629200AFCD0A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

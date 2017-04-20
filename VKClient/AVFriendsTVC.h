@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  AVFriendsTVC.h
 //  VKClient
 //
-//  Created by aiuar on 17.04.17.
+//  Created by aiuar on 19.04.17.
 //  Copyright © 2017 A.V. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AVFriendsTVC : UITableViewController
 
 @end
-
