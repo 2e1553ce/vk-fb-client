@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class AVAccessToken;
-
-typedef void(^AVLoginCompletionBlock)(AVAccessToken *token);
-
 @interface AVLoginVC : UIViewController
-
-- (id)initWithCompletionBlock:(AVLoginCompletionBlock)completionBlock;
 
 @end

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "AVLoginVC.h"
+#import "AVFriendsTVC.h"
 
 @interface AppDelegate ()
 
@@ -16,19 +17,25 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    
-    AVLoginVC *loginVC = [AVLoginVC new];
-    
     UINavigationController *navVC = [UINavigationController new];
-    navVC.viewControllers = @[loginVC];
+    
+    NSDate *tokenExpirationDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"expirationDate"];
+    NSDate *currentDate = [NSDate date];
+    
+    if(tokenExpirationDate && ([tokenExpirationDate compare: currentDate] == NSOrderedDescending)) {
+        AVFriendsTVC *friendsTVC = [AVFriendsTVC new];
+        navVC.viewControllers = @[friendsTVC];
+    } else {
+        AVLoginVC *loginVC = [AVLoginVC new];
+        navVC.viewControllers = @[loginVC];
+    }
     
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
-    
+  
     return YES;
 }
 

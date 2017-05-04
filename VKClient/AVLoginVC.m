@@ -9,27 +9,15 @@
 #import "AVLoginVC.h"
 #import "AVLoginWebView.h"
 #import "AVAccessToken.h"
+#import "AVFriendsTVC.h"
 
 @interface AVLoginVC () <UIWebViewDelegate>
 
-@property (copy, nonatomic) AVLoginCompletionBlock completionBlock;
 @property (strong, nonatomic) AVLoginWebView *loginWebView;
 
 @end
 
 @implementation AVLoginVC
-
-#pragma mark - init
-
-- (id)initWithCompletionBlock:(AVLoginCompletionBlock)completionBlock {
-    self = [super init];
-    
-    if(self) {
-        _completionBlock = completionBlock;
-    }
-    
-    return  self;
-}
 
 #pragma mark - Life cycle
 
@@ -55,7 +43,7 @@
     self.loginWebView = [[AVLoginWebView alloc] initWithFrame:bounds];
     self.loginWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.loginWebView.delegate = self;
-    [self.view addSubview:self.loginWebView];
+    [self.view addSubview: self.loginWebView];
     
     // Cancel button
     UIBarButtonItem *cancelLoginButton = [[UIBarButtonItem alloc] initWithTitle:@"Отмена"
@@ -83,10 +71,6 @@
 #pragma mark - Button actions
 
 - (void)actionCancelLogin:(UIBarButtonItem *)sender {
-    if(self.completionBlock) {
-        self.completionBlock(nil);
-    }
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -94,42 +78,55 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if([  [[request URL] description] rangeOfString:@"access_token="].location != NSNotFound) {
-        
         AVAccessToken *accsessToken = [[AVAccessToken alloc] init];
         
-        NSString *query = [[request URL] description];
-        NSArray *array = [query componentsSeparatedByString:@"#"];
+        NSString *searchedString = request.URL.description;
+        NSRange   searchedRange = NSMakeRange(0, searchedString.length);
         
-        if([array count] > 1) {
-            query = [array lastObject];
-        }
+        NSString *patternForAccessToken = @"access_token=[\\w]*";        NSString *patternForExpiresIn = @"expires_in=[\\d]*";
+        NSString *patternForUserID = @"user_id=[\\d]*";
+        NSError  *error = nil;
         
-        NSArray *pairs = [query componentsSeparatedByString:@"&"];
+        // ACCESS_TOKEN
+        NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern: patternForAccessToken options:0 error:&error];
+        NSArray* matches = [regex matchesInString:searchedString options:0 range: searchedRange];
+        NSTextCheckingResult* match = matches[0];
         
-        for(NSString *pair in pairs){
-            NSArray *comp = [pair componentsSeparatedByString:@"="];
-            
-            if([[comp firstObject] isEqualToString:@"access_token"]) {
-                accsessToken.token = [comp lastObject];
-            } else if([[comp firstObject] isEqualToString:@"user_id"]) {
-                accsessToken.userID = [comp lastObject];
-            } else if([[comp firstObject] isEqualToString:@"expires_in"]) {
-                NSTimeInterval interval = [[comp lastObject] doubleValue];
-                accsessToken.expirationDate = [NSDate dateWithTimeIntervalSinceNow:interval];
-            }
-        }
+        NSString* matchText = [searchedString substringWithRange: match.range];
+        NSArray *pairs = [matchText componentsSeparatedByString:@"="];
+        accsessToken.token = pairs.lastObject;
+        
+        // EXPIRES_IN
+        regex = [NSRegularExpression regularExpressionWithPattern: patternForExpiresIn options:0 error:&error];
+        matches = [regex matchesInString:searchedString options:0 range: searchedRange];
+        match = matches[0];
+        
+        matchText = [searchedString substringWithRange: match.range];
+        pairs = [matchText componentsSeparatedByString:@"="];
+        NSTimeInterval interval = [pairs.lastObject doubleValue];
+        accsessToken.expirationDate = [NSDate dateWithTimeIntervalSinceNow: interval];
+        
+        // USER_ID
+        regex = [NSRegularExpression regularExpressionWithPattern: patternForUserID options:0 error:&error];
+        matches = [regex matchesInString:searchedString options:0 range: searchedRange];
+        match = matches[0];
+        
+        matchText = [searchedString substringWithRange:[match range]];
+        pairs = [matchText componentsSeparatedByString:@"="];
+        accsessToken.userID = pairs.lastObject;
+        
+        // Saving token to NSUserDefaults
+        [[NSUserDefaults standardUserDefaults] setObject:accsessToken.token forKey:@"token"];
+        [[NSUserDefaults standardUserDefaults] setObject:accsessToken.expirationDate forKey:@"expirationDate"];
+        [[NSUserDefaults standardUserDefaults] setObject:accsessToken.userID forKey:@"userID"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         self.loginWebView.delegate = nil;
-        
-        if(self.completionBlock) {
-            self.completionBlock(accsessToken);
-        }
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
+        AVFriendsTVC *friendsTVC = [AVFriendsTVC new];
+        [self.navigationController pushViewController:friendsTVC animated:YES];
         
         return NO;
     }
-    
     return YES;
 }
 

@@ -12,8 +12,13 @@
 
 @interface AVServerManager : NSObject
 
-- (AVServerManager *)sharedManager;
+- (void) getUser:(NSString*) userID
+       onSuccess:(void(^)(AVUser* user)) success
+       onFailure:(void(^)(NSError* error, NSInteger statusCode)) failure;
 
-- (void)authorizeUser:(void(^)(AVUser *user))completion;
+- (void) getFriendsWithOffset:(NSInteger)offset
+                        count:(NSInteger)count
+                    onSuccess:(void(^)(NSArray *friends))success
+                    onFailure:(void(^)(NSError *error, NSInteger  statusCode))failure;
 
 @end
