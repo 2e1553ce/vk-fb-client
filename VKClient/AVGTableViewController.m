@@ -53,7 +53,6 @@ typedef NS_ENUM(NSInteger, SelectedSocialNetwork){
     [self.loginButton addTarget:self action:@selector(loginButtonClicked) forControlEvents: UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.loginButton];
     
-    //self.navigationItem.title = @"Друзья";
     self.contactList = [AVGContactList new];
     self.selectedSocialNetwork = SelectedSocialNetworkVkontakte;
 }
