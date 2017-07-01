@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195A4E021F08330700E61B5F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4DFE1F08330700E61B5F /* Bolts.framework */; };
+		195A4E031F08330700E61B5F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4DFF1F08330700E61B5F /* FBSDKCoreKit.framework */; };
+		195A4E041F08330700E61B5F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4E001F08330700E61B5F /* FBSDKLoginKit.framework */; };
+		195A4E051F08330700E61B5F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4E011F08330700E61B5F /* FBSDKShareKit.framework */; };
+		195A4E091F08336200E61B5F /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4E061F08336200E61B5F /* AccountKit.framework */; };
+		195A4E0A1F08336200E61B5F /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4E071F08336200E61B5F /* FBAudienceNetwork.framework */; };
+		195A4E0B1F08336200E61B5F /* FBNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195A4E081F08336200E61B5F /* FBNotifications.framework */; };
+		195A4E111F08375400E61B5F /* AVGContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E101F08375400E61B5F /* AVGContact.m */; };
+		195A4E141F08376200E61B5F /* AVGContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E131F08376200E61B5F /* AVGContactList.m */; };
+		195A4E171F08380D00E61B5F /* AVGContactService.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E161F08380D00E61B5F /* AVGContactService.m */; };
+		195A4E1A1F0838D800E61B5F /* AVGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E191F0838D800E61B5F /* AVGTableViewController.m */; };
+		195A4E1E1F08391900E61B5F /* AVGVKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E1D1F08391900E61B5F /* AVGVKViewController.m */; };
+		195A4E231F08394800E61B5F /* AVGDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E221F08394800E61B5F /* AVGDetailedViewController.m */; };
+		195A4E271F08398300E61B5F /* AVGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 195A4E261F08398300E61B5F /* AVGTableViewCell.m */; };
 		19C614991EA5629200AFCD0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614981EA5629200AFCD0A /* main.m */; };
 		19C6149C1EA5629200AFCD0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C6149B1EA5629200AFCD0A /* AppDelegate.m */; };
 		19C614A51EA5629200AFCD0A /* VKClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19C614A31EA5629200AFCD0A /* VKClient.xcdatamodeld */; };
@@ -14,12 +28,6 @@
 		19C614AA1EA5629200AFCD0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C614A81EA5629200AFCD0A /* LaunchScreen.storyboard */; };
 		19C614B51EA5629200AFCD0A /* VKClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614B41EA5629200AFCD0A /* VKClientTests.m */; };
 		19C614C01EA5629200AFCD0A /* VKClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614BF1EA5629200AFCD0A /* VKClientUITests.m */; };
-		19C614DB1EA7C93B00AFCD0A /* AVFriendsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614DA1EA7C93B00AFCD0A /* AVFriendsTVC.m */; };
-		19C614DE1EA7C95C00AFCD0A /* AVLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614DD1EA7C95C00AFCD0A /* AVLoginVC.m */; };
-		19C614E11EA7CA7A00AFCD0A /* AVServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E01EA7CA7A00AFCD0A /* AVServerManager.m */; };
-		19C614E41EA8C0A400AFCD0A /* AVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E31EA8C0A400AFCD0A /* AVUser.m */; };
-		19C614E71EA8C19F00AFCD0A /* AVAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E61EA8C19F00AFCD0A /* AVAccessToken.m */; };
-		19C614EA1EA8D77D00AFCD0A /* AVLoginWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C614E91EA8D77D00AFCD0A /* AVLoginWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		195A4DFE1F08330700E61B5F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		195A4DFF1F08330700E61B5F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		195A4E001F08330700E61B5F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		195A4E011F08330700E61B5F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		195A4E061F08336200E61B5F /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		195A4E071F08336200E61B5F /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		195A4E081F08336200E61B5F /* FBNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBNotifications.framework; sourceTree = "<group>"; };
+		195A4E0C1F08368400E61B5F /* VKClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKClient-Prefix.pch"; sourceTree = "<group>"; };
+		195A4E0F1F08375400E61B5F /* AVGContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGContact.h; sourceTree = "<group>"; };
+		195A4E101F08375400E61B5F /* AVGContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGContact.m; sourceTree = "<group>"; };
+		195A4E121F08376200E61B5F /* AVGContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGContactList.h; sourceTree = "<group>"; };
+		195A4E131F08376200E61B5F /* AVGContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGContactList.m; sourceTree = "<group>"; };
+		195A4E151F08380D00E61B5F /* AVGContactService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGContactService.h; sourceTree = "<group>"; };
+		195A4E161F08380D00E61B5F /* AVGContactService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGContactService.m; sourceTree = "<group>"; };
+		195A4E181F0838D800E61B5F /* AVGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGTableViewController.h; sourceTree = "<group>"; };
+		195A4E191F0838D800E61B5F /* AVGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGTableViewController.m; sourceTree = "<group>"; };
+		195A4E1C1F08391900E61B5F /* AVGVKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGVKViewController.h; sourceTree = "<group>"; };
+		195A4E1D1F08391900E61B5F /* AVGVKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGVKViewController.m; sourceTree = "<group>"; };
+		195A4E211F08394800E61B5F /* AVGDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGDetailedViewController.h; sourceTree = "<group>"; };
+		195A4E221F08394800E61B5F /* AVGDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGDetailedViewController.m; sourceTree = "<group>"; };
+		195A4E251F08398300E61B5F /* AVGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGTableViewCell.h; sourceTree = "<group>"; };
+		195A4E261F08398300E61B5F /* AVGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGTableViewCell.m; sourceTree = "<group>"; };
 		19C614941EA5629200AFCD0A /* VKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C614981EA5629200AFCD0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19C6149A1EA5629200AFCD0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,18 +84,6 @@
 		19C614BB1EA5629200AFCD0A /* VKClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C614BF1EA5629200AFCD0A /* VKClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKClientUITests.m; sourceTree = "<group>"; };
 		19C614C11EA5629200AFCD0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19C614D91EA7C93B00AFCD0A /* AVFriendsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVFriendsTVC.h; sourceTree = "<group>"; };
-		19C614DA1EA7C93B00AFCD0A /* AVFriendsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVFriendsTVC.m; sourceTree = "<group>"; };
-		19C614DC1EA7C95C00AFCD0A /* AVLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginVC.h; sourceTree = "<group>"; };
-		19C614DD1EA7C95C00AFCD0A /* AVLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginVC.m; sourceTree = "<group>"; };
-		19C614DF1EA7CA7A00AFCD0A /* AVServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVServerManager.h; sourceTree = "<group>"; };
-		19C614E01EA7CA7A00AFCD0A /* AVServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVServerManager.m; sourceTree = "<group>"; };
-		19C614E21EA8C0A400AFCD0A /* AVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVUser.h; sourceTree = "<group>"; };
-		19C614E31EA8C0A400AFCD0A /* AVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVUser.m; sourceTree = "<group>"; };
-		19C614E51EA8C19F00AFCD0A /* AVAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAccessToken.h; sourceTree = "<group>"; };
-		19C614E61EA8C19F00AFCD0A /* AVAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAccessToken.m; sourceTree = "<group>"; };
-		19C614E81EA8D77D00AFCD0A /* AVLoginWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginWebView.h; sourceTree = "<group>"; };
-		19C614E91EA8D77D00AFCD0A /* AVLoginWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195A4E051F08330700E61B5F /* FBSDKShareKit.framework in Frameworks */,
+				195A4E021F08330700E61B5F /* Bolts.framework in Frameworks */,
+				195A4E091F08336200E61B5F /* AccountKit.framework in Frameworks */,
+				195A4E0A1F08336200E61B5F /* FBAudienceNetwork.framework in Frameworks */,
+				195A4E0B1F08336200E61B5F /* FBNotifications.framework in Frameworks */,
+				195A4E031F08330700E61B5F /* FBSDKCoreKit.framework in Frameworks */,
+				195A4E041F08330700E61B5F /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +118,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195A4DFD1F0832CD00E61B5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E061F08336200E61B5F /* AccountKit.framework */,
+				195A4E071F08336200E61B5F /* FBAudienceNetwork.framework */,
+				195A4E081F08336200E61B5F /* FBNotifications.framework */,
+				195A4DFE1F08330700E61B5F /* Bolts.framework */,
+				195A4DFF1F08330700E61B5F /* FBSDKCoreKit.framework */,
+				195A4E001F08330700E61B5F /* FBSDKLoginKit.framework */,
+				195A4E011F08330700E61B5F /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		195A4E0D1F08372500E61B5F /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E0F1F08375400E61B5F /* AVGContact.h */,
+				195A4E101F08375400E61B5F /* AVGContact.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		195A4E0E1F08372F00E61B5F /* Contact list */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E121F08376200E61B5F /* AVGContactList.h */,
+				195A4E131F08376200E61B5F /* AVGContactList.m */,
+			);
+			name = "Contact list";
+			sourceTree = "<group>";
+		};
+		195A4E1B1F0838DE00E61B5F /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E181F0838D800E61B5F /* AVGTableViewController.h */,
+				195A4E191F0838D800E61B5F /* AVGTableViewController.m */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		195A4E1F1F08391E00E61B5F /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E1C1F08391900E61B5F /* AVGVKViewController.h */,
+				195A4E1D1F08391900E61B5F /* AVGVKViewController.m */,
+			);
+			name = VK;
+			sourceTree = "<group>";
+		};
+		195A4E201F08393000E61B5F /* Detailed */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E211F08394800E61B5F /* AVGDetailedViewController.h */,
+				195A4E221F08394800E61B5F /* AVGDetailedViewController.m */,
+			);
+			name = Detailed;
+			sourceTree = "<group>";
+		};
+		195A4E241F08396000E61B5F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				195A4E251F08398300E61B5F /* AVGTableViewCell.h */,
+				195A4E261F08398300E61B5F /* AVGTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		19C6148B1EA5629200AFCD0A = {
 			isa = PBXGroup;
 			children = (
 				19C614961EA5629200AFCD0A /* VKClient */,
 				19C614B31EA5629200AFCD0A /* VKClientTests */,
 				19C614BE1EA5629200AFCD0A /* VKClientUITests */,
+				195A4DFD1F0832CD00E61B5F /* Frameworks */,
 				19C614951EA5629200AFCD0A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,7 +210,6 @@
 		19C614961EA5629200AFCD0A /* VKClient */ = {
 			isa = PBXGroup;
 			children = (
-				19C614D21EA7C03800AFCD0A /* Server manager */,
 				19C614CF1EA562BB00AFCD0A /* Models */,
 				19C614CE1EA562B800AFCD0A /* Views */,
 				19C614CD1EA562B400AFCD0A /* Controllers */,
@@ -124,6 +217,7 @@
 				19C6149B1EA5629200AFCD0A /* AppDelegate.m */,
 				19C614A61EA5629200AFCD0A /* Assets.xcassets */,
 				19C614A81EA5629200AFCD0A /* LaunchScreen.storyboard */,
+				195A4E0C1F08368400E61B5F /* VKClient-Prefix.pch */,
 				19C614AB1EA5629200AFCD0A /* Info.plist */,
 				19C614A31EA5629200AFCD0A /* VKClient.xcdatamodeld */,
 				19C614971EA5629200AFCD0A /* Supporting Files */,
@@ -161,10 +255,9 @@
 		19C614CD1EA562B400AFCD0A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				19C614D91EA7C93B00AFCD0A /* AVFriendsTVC.h */,
-				19C614DA1EA7C93B00AFCD0A /* AVFriendsTVC.m */,
-				19C614DC1EA7C95C00AFCD0A /* AVLoginVC.h */,
-				19C614DD1EA7C95C00AFCD0A /* AVLoginVC.m */,
+				195A4E1B1F0838DE00E61B5F /* Table */,
+				195A4E1F1F08391E00E61B5F /* VK */,
+				195A4E201F08393000E61B5F /* Detailed */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -172,8 +265,7 @@
 		19C614CE1EA562B800AFCD0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				19C614E81EA8D77D00AFCD0A /* AVLoginWebView.h */,
-				19C614E91EA8D77D00AFCD0A /* AVLoginWebView.m */,
+				195A4E241F08396000E61B5F /* Cell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -181,10 +273,9 @@
 		19C614CF1EA562BB00AFCD0A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				19C614E21EA8C0A400AFCD0A /* AVUser.h */,
-				19C614E31EA8C0A400AFCD0A /* AVUser.m */,
-				19C614E51EA8C19F00AFCD0A /* AVAccessToken.h */,
-				19C614E61EA8C19F00AFCD0A /* AVAccessToken.m */,
+				19C614D21EA7C03800AFCD0A /* Server manager */,
+				195A4E0D1F08372500E61B5F /* Contact */,
+				195A4E0E1F08372F00E61B5F /* Contact list */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -199,8 +290,8 @@
 		19C614D21EA7C03800AFCD0A /* Server manager */ = {
 			isa = PBXGroup;
 			children = (
-				19C614DF1EA7CA7A00AFCD0A /* AVServerManager.h */,
-				19C614E01EA7CA7A00AFCD0A /* AVServerManager.m */,
+				195A4E151F08380D00E61B5F /* AVGContactService.h */,
+				195A4E161F08380D00E61B5F /* AVGContactService.m */,
 			);
 			name = "Server manager";
 			sourceTree = "<group>";
@@ -267,7 +358,7 @@
 		19C6148C1EA5629200AFCD0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = A.V.;
 				TargetAttributes = {
 					19C614931EA5629200AFCD0A = {
@@ -340,15 +431,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C614EA1EA8D77D00AFCD0A /* AVLoginWebView.m in Sources */,
+				195A4E271F08398300E61B5F /* AVGTableViewCell.m in Sources */,
 				19C614A51EA5629200AFCD0A /* VKClient.xcdatamodeld in Sources */,
-				19C614DB1EA7C93B00AFCD0A /* AVFriendsTVC.m in Sources */,
-				19C614E41EA8C0A400AFCD0A /* AVUser.m in Sources */,
-				19C614DE1EA7C95C00AFCD0A /* AVLoginVC.m in Sources */,
-				19C614E71EA8C19F00AFCD0A /* AVAccessToken.m in Sources */,
+				195A4E171F08380D00E61B5F /* AVGContactService.m in Sources */,
+				195A4E231F08394800E61B5F /* AVGDetailedViewController.m in Sources */,
+				195A4E111F08375400E61B5F /* AVGContact.m in Sources */,
+				195A4E1A1F0838D800E61B5F /* AVGTableViewController.m in Sources */,
+				195A4E141F08376200E61B5F /* AVGContactList.m in Sources */,
 				19C6149C1EA5629200AFCD0A /* AppDelegate.m in Sources */,
+				195A4E1E1F08391900E61B5F /* AVGVKViewController.m in Sources */,
 				19C614991EA5629200AFCD0A /* main.m in Sources */,
-				19C614E11EA7CA7A00AFCD0A /* AVServerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +505,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -460,6 +553,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -488,6 +582,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z48WYVF59J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VKClient/VKClient-Prefix.pch";
 				INFOPLIST_FILE = VKClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aivar.vucins.VKClient;
@@ -500,6 +600,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z48WYVF59J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VKClient/VKClient-Prefix.pch";
 				INFOPLIST_FILE = VKClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aivar.vucins.VKClient;
@@ -576,6 +682,7 @@
 				19C614C61EA5629200AFCD0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19C614C71EA5629200AFCD0A /* Build configuration list for PBXNativeTarget "VKClientTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +691,7 @@
 				19C614C91EA5629200AFCD0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19C614CA1EA5629200AFCD0A /* Build configuration list for PBXNativeTarget "VKClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +700,7 @@
 				19C614CC1EA5629200AFCD0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

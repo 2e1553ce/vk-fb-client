@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
-#import "AVLoginVC.h"
-#import "AVFriendsTVC.h"
+#import "AVGTableViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface AppDelegate ()
 
@@ -18,25 +17,29 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UINavigationController *navVC = [UINavigationController new];
-    
-    NSDate *tokenExpirationDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"expirationDate"];
-    NSDate *currentDate = [NSDate date];
-    
-    if(tokenExpirationDate && ([tokenExpirationDate compare: currentDate] == NSOrderedDescending)) {
-        AVFriendsTVC *friendsTVC = [AVFriendsTVC new];
-        navVC.viewControllers = @[friendsTVC];
-    } else {
-        AVLoginVC *loginVC = [AVLoginVC new];
-        navVC.viewControllers = @[loginVC];
-    }
-    
-    self.window.rootViewController = navVC;
+    AVGTableViewController *vc = [AVGTableViewController new];
+    UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
   
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                    ];
+    // Add any custom logic here.
+    return handled;
 }
 
 #pragma mark - Core Data stack
